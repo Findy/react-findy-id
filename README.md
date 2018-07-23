@@ -17,6 +17,11 @@
 - `git clone https://github.com/Findy/react-findy-id.git`
 - `npm install`
 
+## Run on local example app
+
+- `npm start`
+- Open `http://localhost:3001`
+
 ## Publish
 
 - `npm run build`

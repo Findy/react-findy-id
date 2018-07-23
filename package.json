@@ -2,10 +2,11 @@
   "name": "@findy/react-findy-id",
   "version": "1.0.0",
   "description": "React container for Findy ID.",
-  "main": "build/FindyId.js",
+  "main": "build/index.js",
   "scripts": {
     "build": "babel src -d build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,13 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1"
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^3.2.0",
+    "react-dom": "^15.6.2",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
   }
 }
