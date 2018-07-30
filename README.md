@@ -54,5 +54,8 @@ privacyPolicyUrl|String|Privacy Policy URL.
 
 ## Publish
 
+- `git checkout -b release/vX.X.X`
+- Bump package version in `package.json`.
+- `git commit -am 'Bump version to vX.X.X'`
 - `npm run build`
 - `npm publish --access=public`
