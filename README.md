@@ -63,7 +63,7 @@ privacyPolicyUrl|String|Privacy Policy URL.
 - `git push origin vX.X.X`
 - `git push origin release/vX.X.X`
 - `git checkout master`
-- `git commit --no-ff release/vX.X.X`
+- `git merge --no-ff release/vX.X.X`
 - `git push origin master`
 - `git push origin :release/vX.X.X`
 - `git branch -d release/vX.X.X`
