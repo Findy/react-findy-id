@@ -40,45 +40,51 @@ var FindyIdComponent = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (FindyIdComponent.__proto__ || Object.getPrototypeOf(FindyIdComponent)).call(this, props));
 
-    var config = {
-      apiKey: "AIzaSyDOTe8SVN_5WGtuKdXQoQy5slhAq3kEIbs",
-      authDomain: "findy-id.firebaseapp.com",
-      databaseURL: "https://findy-id.firebaseio.com",
-      projectId: "findy-id",
-      storageBucket: "findy-id.appspot.com",
-      messagingSenderId: "943881521886"
-    };
-    _app2.default.initializeApp(config);
+    _this.firebaseUiCallbacks = _this.firebaseUiCallbacks.bind(_this);
 
-    // FirebaseUI config.
-    var uiConfig = {
-      callbacks: {
-        signInSuccessWithAuthResult: function signInSuccessWithAuthResult(authResult, redirectUrl) {
-          var user = authResult.user;
-          var credential = authResult.credential;
-          var isNewUser = authResult.additionalUserInfo.isNewUser;
-          var providerId = authResult.additionalUserInfo.providerId;
-          var operationType = authResult.operationType;
-          console.log(user, credential, isNewUser, providerId, operationType);
-          // Do something with the returned AuthResult.
-          // Return type determines whether we continue the redirect automatically
-          // or whether we leave that to developer to handle.
-          return false;
-        }
-      },
-      signInOptions: [_app2.default.auth.GithubAuthProvider.PROVIDER_ID],
-      tosUrl: 'https://findy-code.io/',
-      privacyPolicyUrl: 'https://findy-code.io/'
-    };
+    _this.firebaseConfig = _this.firebaseConfig.bind(_this);
+    _app2.default.initializeApp(_this.firebaseConfig());
 
-    // Initialize the FirebaseUI Widget using Firebase.
+    _this.firebaseUiConfig = _this.firebaseUiConfig.bind(_this);
     var ui = new firebaseui.auth.AuthUI(_app2.default.auth());
-    // The start method will wait until the DOM is loaded.
-    ui.start('#firebaseui-auth-container', uiConfig);
+    ui.start('#firebaseui-auth-container', _this.firebaseUiConfig());
     return _this;
   }
 
   _createClass(FindyIdComponent, [{
+    key: 'firebaseConfig',
+    value: function firebaseConfig() {
+      return {
+        apiKey: "AIzaSyDOTe8SVN_5WGtuKdXQoQy5slhAq3kEIbs",
+        authDomain: "findy-id.firebaseapp.com",
+        databaseURL: "https://findy-id.firebaseio.com",
+        projectId: "findy-id",
+        storageBucket: "findy-id.appspot.com",
+        messagingSenderId: "943881521886"
+      };
+    }
+  }, {
+    key: 'firebaseUiConfig',
+    value: function firebaseUiConfig() {
+      return {
+        callbacks: this.firebaseUiCallbacks(this.props.afterSignInSuccessCallback),
+        signInSuccessUrl: this.props.signInSuccessUrl,
+        signInOptions: [_app2.default.auth.GithubAuthProvider.PROVIDER_ID],
+        tosUrl: this.props.tosUrl,
+        privacyPolicyUrl: this.props.privacyPolicyUrl
+      };
+    }
+  }, {
+    key: 'firebaseUiCallbacks',
+    value: function firebaseUiCallbacks(afterSignInSuccessCallback) {
+      return {
+        signInSuccessWithAuthResult: function signInSuccessWithAuthResult(authResult) {
+          afterSignInSuccessCallback(authResult);
+          return true;
+        }
+      };
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement('div', { id: 'firebaseui-auth-container' });
