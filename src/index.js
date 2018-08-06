@@ -1,3 +1,3 @@
-import FindyIdComponent from './FindyIdComponent';
+import { FindyIdComponent } from './FindyIdComponent';
 
-export default FindyIdComponent;
+export { FindyIdComponent };

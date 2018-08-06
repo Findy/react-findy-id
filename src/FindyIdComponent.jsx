@@ -8,7 +8,7 @@ import * as firebaseui from 'firebaseui'
 import 'firebaseui/dist/firebaseui.css';
 import { firebaseConfig } from './config';
 
-export default class FindyIdComponent extends Component {
+export class FindyIdComponent extends Component {
 
   constructor(props) {
     super(props);
