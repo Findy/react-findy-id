@@ -10,11 +10,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _app = require('firebase/app');
+var _app = require('@firebase/app');
 
-var _app2 = _interopRequireDefault(_app);
-
-require('firebase/auth');
+require('@firebase/auth');
 
 var _firebaseui = require('firebaseui');
 
@@ -31,6 +29,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+// https://github.com/firebase/firebase-js-sdk/issues/100#issuecomment-402780308
+// import firebase from 'firebase/app';
+// import 'firebase/auth';
+
 
 var FindyIdComponent = function (_Component) {
   _inherits(FindyIdComponent, _Component);
@@ -43,10 +45,10 @@ var FindyIdComponent = function (_Component) {
     _this.firebaseUiCallbacks = _this.firebaseUiCallbacks.bind(_this);
 
     _this.firebaseConfig = _this.firebaseConfig.bind(_this);
-    _app2.default.initializeApp(_this.firebaseConfig());
+    _app.firebase.initializeApp(_this.firebaseConfig());
 
     _this.firebaseUiConfig = _this.firebaseUiConfig.bind(_this);
-    var ui = new firebaseui.auth.AuthUI(_app2.default.auth());
+    var ui = new firebaseui.auth.AuthUI(_app.firebase.auth());
     ui.start('#firebaseui-auth-container', _this.firebaseUiConfig());
     return _this;
   }
@@ -69,7 +71,7 @@ var FindyIdComponent = function (_Component) {
       return {
         callbacks: this.firebaseUiCallbacks(this.props.afterSignInSuccessCallback),
         signInSuccessUrl: this.props.signInSuccessUrl,
-        signInOptions: [_app2.default.auth.GithubAuthProvider.PROVIDER_ID],
+        signInOptions: [_app.firebase.auth.GithubAuthProvider.PROVIDER_ID],
         tosUrl: this.props.tosUrl,
         privacyPolicyUrl: this.props.privacyPolicyUrl
       };
