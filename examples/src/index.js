@@ -5,7 +5,7 @@ import FindyIdComponent from '../../src';
 const afterSignInSuccessCallback = (authResult) => {
   authResult.user.getIdToken().then(function(idToken) {
     const message = 'Hello! ' + authResult.additionalUserInfo.username + '\n' +
-      'Your ID Token is bellow.\n\n' + idToken;
+      'Your ID Token is below.\n\n' + idToken;
 
     alert(message);
   });
