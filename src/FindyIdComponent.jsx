@@ -14,7 +14,7 @@ export default class FindyIdComponent extends Component {
     super(props);
     firebase.initializeApp(firebaseConfig);
 
-    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    const ui = new firebaseui.auth.AuthUI(firebase.auth());
     ui.start('#firebaseui-auth-container', this.firebaseUiConfig());
   }
 
