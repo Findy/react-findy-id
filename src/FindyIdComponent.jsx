@@ -19,14 +19,16 @@ export default class FindyIdComponent extends Component {
   }
 
   firebaseUiConfig() {
+    const props = this.props;
+
     return ({
-      callbacks: this.firebaseUiCallbacks(this.props.afterSignInSuccessCallback),
-      signInSuccessUrl: this.props.signInSuccessUrl,
+      callbacks: this.firebaseUiCallbacks(props.afterSignInSuccessCallback),
+      signInSuccessUrl: props.signInSuccessUrl,
       signInOptions: [
         firebase.auth.GithubAuthProvider.PROVIDER_ID
       ],
-      tosUrl: this.props.tosUrl,
-      privacyPolicyUrl: this.props.privacyPolicyUrl
+      tosUrl: props.tosUrl,
+      privacyPolicyUrl: props.privacyPolicyUrl
     });
   }
 
