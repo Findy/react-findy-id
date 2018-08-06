@@ -32,7 +32,7 @@ export default class FindyIdComponent extends Component {
 
   firebaseUiCallbacks(afterSignInSuccessCallback) {
     return ({
-      signInSuccessWithAuthResult: function(authResult) {
+      signInSuccessWithAuthResult: (authResult) => {
         afterSignInSuccessCallback(authResult);
         return true;
       }
