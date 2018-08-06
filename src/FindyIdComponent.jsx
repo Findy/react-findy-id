@@ -40,8 +40,6 @@ export default class FindyIdComponent extends Component {
   }
 
   render() {
-    return (
-      <div id="firebaseui-auth-container"></div>
-    );
+    return <div id="firebaseui-auth-container"/>;
   }
 }
