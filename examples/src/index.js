@@ -1,6 +1,6 @@
 import React from 'react';
-import { render} from 'react-dom';
-import FindyIdComponent from '../../src';
+import { render } from 'react-dom';
+import { FindyIdComponent } from '../../src';
 
 const afterSignInSuccessCallback = (authResult) => {
   authResult.user.getIdToken().then(function(idToken) {
@@ -9,8 +9,7 @@ const afterSignInSuccessCallback = (authResult) => {
 
     alert(message);
   });
-
-}
+};
 
 const App = () => (
   <FindyIdComponent
