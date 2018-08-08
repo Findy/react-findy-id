@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.FindyIdComponent = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -20,6 +21,8 @@ var firebaseui = _interopRequireWildcard(_firebaseui);
 
 require('firebaseui/dist/firebaseui.css');
 
+var _config = require('./config');
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -34,7 +37,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // import 'firebase/auth';
 
 
-var FindyIdComponent = function (_Component) {
+var FindyIdComponent = exports.FindyIdComponent = function (_Component) {
   _inherits(FindyIdComponent, _Component);
 
   function FindyIdComponent(props) {
@@ -42,38 +45,24 @@ var FindyIdComponent = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (FindyIdComponent.__proto__ || Object.getPrototypeOf(FindyIdComponent)).call(this, props));
 
-    _this.firebaseUiCallbacks = _this.firebaseUiCallbacks.bind(_this);
+    _app.firebase.initializeApp(_config.firebaseConfig);
 
-    _this.firebaseConfig = _this.firebaseConfig.bind(_this);
-    _app.firebase.initializeApp(_this.firebaseConfig());
-
-    _this.firebaseUiConfig = _this.firebaseUiConfig.bind(_this);
     var ui = new firebaseui.auth.AuthUI(_app.firebase.auth());
     ui.start('#firebaseui-auth-container', _this.firebaseUiConfig());
     return _this;
   }
 
   _createClass(FindyIdComponent, [{
-    key: 'firebaseConfig',
-    value: function firebaseConfig() {
-      return {
-        apiKey: "AIzaSyDOTe8SVN_5WGtuKdXQoQy5slhAq3kEIbs",
-        authDomain: "findy-id.firebaseapp.com",
-        databaseURL: "https://findy-id.firebaseio.com",
-        projectId: "findy-id",
-        storageBucket: "findy-id.appspot.com",
-        messagingSenderId: "943881521886"
-      };
-    }
-  }, {
     key: 'firebaseUiConfig',
     value: function firebaseUiConfig() {
+      var props = this.props;
+
       return {
-        callbacks: this.firebaseUiCallbacks(this.props.afterSignInSuccessCallback),
-        signInSuccessUrl: this.props.signInSuccessUrl,
+        callbacks: this.firebaseUiCallbacks(props.afterSignInSuccessCallback),
+        signInSuccessUrl: props.signInSuccessUrl,
         signInOptions: [_app.firebase.auth.GithubAuthProvider.PROVIDER_ID],
-        tosUrl: this.props.tosUrl,
-        privacyPolicyUrl: this.props.privacyPolicyUrl
+        tosUrl: props.tosUrl,
+        privacyPolicyUrl: props.privacyPolicyUrl
       };
     }
   }, {
@@ -95,5 +84,3 @@ var FindyIdComponent = function (_Component) {
 
   return FindyIdComponent;
 }(_react.Component);
-
-exports.default = FindyIdComponent;
