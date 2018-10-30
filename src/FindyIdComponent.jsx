@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-// https://github.com/firebase/firebase-js-sdk/issues/100#issuecomment-402780308
-// import firebase from 'firebase/app';
-// import 'firebase/auth';
-import { firebase } from '@firebase/app';
-import '@firebase/auth';
+import firebase from 'firebase/app'
+import 'firebase/auth';
 import * as firebaseui from 'firebaseui'
 import 'firebaseui/dist/firebaseui.css';
 import { firebaseConfig } from './config';
