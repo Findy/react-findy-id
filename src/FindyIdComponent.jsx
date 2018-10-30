@@ -3,14 +3,11 @@ import firebase from 'firebase/app'
 import 'firebase/auth';
 import * as firebaseui from 'firebaseui'
 import 'firebaseui/dist/firebaseui.css';
-import { firebaseConfig } from './config';
 
 export class FindyIdComponent extends Component {
 
   constructor(props) {
     super(props);
-    firebase.initializeApp(firebaseConfig);
-
     const ui = new firebaseui.auth.AuthUI(firebase.auth());
     ui.start('#firebaseui-auth-container', this.firebaseUiConfig());
   }
