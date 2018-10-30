@@ -36,7 +36,6 @@ export class FindyIdComponent extends Component {
     return ({
       signInSuccessWithAuthResult: (authResult) => {
         afterSignInSuccessCallback(authResult);
-        return true;
       }
     });
   }
