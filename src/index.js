@@ -1,3 +1,11 @@
-import { FindyIdComponent } from './FindyIdComponent';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
-export { FindyIdComponent };
+import { firebaseConfig } from './config'
+
+// initialize when loaded
+firebase.initializeApp(firebaseConfig);
+
+export * from './FirebaseAuthRepository'
+export { FindyIdComponent } from './FindyIdComponent'
+
