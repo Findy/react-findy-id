@@ -4,6 +4,7 @@
   "description": "React container for Findy ID.",
   "main": "build/index.js",
   "scripts": {
+    "lint": "eslint src",
     "build": "babel src -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development"
@@ -25,11 +26,18 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
     "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.15.2",
     "react-dom": "^15.6.2",
     "style-loader": "^0.23.1",
     "webpack": "^4.25.1",
