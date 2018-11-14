@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/Findy/react-findy-id/tree/master.svg?style=svg)](https://circleci.com/gh/Findy/react-findy-id/tree/master)
+
 # React Findy ID
 
 # How to use
