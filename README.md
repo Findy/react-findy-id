@@ -57,16 +57,8 @@ privacyPolicyUrl|String|Privacy Policy URL.
 
 ## Publish
 
-- `git checkout -b release/vX.X.X`
-- Bump package version in `package.json`.
-- `npm run build`
-- `npm publish --access=public`
-- `git commit -am 'Bump version to vX.X.X'`
-- `git tag -a vX.X.X -m 'vX.X.X release'`
-- `git push origin vX.X.X`
-- `git push origin release/vX.X.X`
 - `git checkout master`
-- `git merge --no-ff release/vX.X.X`
+- `npm version [major | minor | patch]`
 - `git push origin master`
-- `git push origin :release/vX.X.X`
-- `git branch -d release/vX.X.X`
+- `git push origin vX.X.X`
+- `npm publish --access=public`
