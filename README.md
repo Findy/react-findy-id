@@ -20,10 +20,11 @@ Put Sign-in button on your app.
 
 ```javascript
 <FindyIdComponent
-    afterSignInSuccessCallback={afterSignInSuccessCallback}
-    signInSuccessUrl="http://localhost:3001"
-    tosUrl="https://findy-code.io/terms"
-    privacyPolicyUrl="https://findy-code.io/policy" />
+  afterSignInSuccessCallback={afterSignInSuccessCallback}
+  signInSuccessUrl="http://localhost:3001"
+  tosUrl="https://findy-code.io/terms"
+  privacyPolicyUrl="https://findy-code.io/policy"
+/>
 ```
 
 Name|type|Description
