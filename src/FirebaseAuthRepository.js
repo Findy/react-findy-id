@@ -24,3 +24,11 @@ export const getToken = async () => {
  * sign out
  */
 export const signOut = async () => await firebase.auth().signOut()
+
+/**
+ * delete current user
+ */
+export const deleteCurrentUser = async () => {
+  const user = await getUser()
+  return user && (await user.delete())
+}
