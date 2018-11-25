@@ -20,10 +20,11 @@ Put Sign-in button on your app.
 
 ```javascript
 <FindyIdComponent
-    afterSignInSuccessCallback={afterSignInSuccessCallback}
-    signInSuccessUrl="http://localhost:3001"
-    tosUrl="https://findy-code.io/terms"
-    privacyPolicyUrl="https://findy-code.io/policy" />
+  afterSignInSuccessCallback={afterSignInSuccessCallback}
+  signInSuccessUrl="http://localhost:3001"
+  tosUrl="https://findy-code.io/terms"
+  privacyPolicyUrl="https://findy-code.io/policy"
+/>
 ```
 
 Name|type|Description
@@ -56,16 +57,8 @@ privacyPolicyUrl|String|Privacy Policy URL.
 
 ## Publish
 
-- `git checkout -b release/vX.X.X`
-- Bump package version in `package.json`.
-- `npm run build`
-- `npm publish --access=public`
-- `git commit -am 'Bump version to vX.X.X'`
-- `git tag -a vX.X.X -m 'vX.X.X release'`
-- `git push origin vX.X.X`
-- `git push origin release/vX.X.X`
 - `git checkout master`
-- `git merge --no-ff release/vX.X.X`
+- `npm version [major | minor | patch]`
 - `git push origin master`
-- `git push origin :release/vX.X.X`
-- `git branch -d release/vX.X.X`
+- `git push origin vX.X.X`
+- `npm publish --access=public`

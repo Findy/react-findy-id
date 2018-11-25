@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint src",
     "build": "babel src -d build",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development"
   },
@@ -21,15 +22,16 @@
   "homepage": "https://github.com/Findy/react-findy-id#readme",
   "dependencies": {
     "firebase": "^5.5.7",
-    "firebaseui": "^3.4.1",
-    "react": "^15.6.2"
+    "firebaseui": "^3.4.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
+    "babel-loader": "^8.0.0",
     "css-loader": "^1.0.1",
     "eslint": "^5.9.0",
     "eslint-config-prettier": "^3.3.0",
@@ -38,10 +40,14 @@
     "eslint-plugin-react": "^7.11.1",
     "html-webpack-plugin": "^3.2.0",
     "prettier": "^1.15.2",
-    "react-dom": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "style-loader": "^0.23.1",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
+  },
+  "peerDependencies": {
+    "react": "^15.6.0 || ^16.0.0"
   }
 }
