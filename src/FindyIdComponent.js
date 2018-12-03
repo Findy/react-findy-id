@@ -17,12 +17,12 @@ export class FindyIdComponent extends Component {
     return {
       callbacks: this.firebaseUiCallbacks(props.afterSignInSuccessCallback),
       signInSuccessUrl: props.signInSuccessUrl,
-      signInOptions: [{
-        provider: firebase.auth.GithubAuthProvider.PROVIDER_ID,
-        scopes: [
-          "user:email"
-        ]
-      }],
+      signInOptions: [
+        {
+          provider: firebase.auth.GithubAuthProvider.PROVIDER_ID,
+          scopes: ['user:email']
+        }
+      ],
       tosUrl: props.tosUrl,
       privacyPolicyUrl: props.privacyPolicyUrl
     }
