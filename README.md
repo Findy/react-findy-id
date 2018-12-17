@@ -62,3 +62,13 @@ privacyPolicyUrl|String|Privacy Policy URL.
 - `git push origin master`
 - `git push origin vX.X.X`
 - `npm publish --access=public`
+
+### localization
+
+- `git clone https://github.com/firebase/firebaseui-web.git`
+- `cd firebaseui-web`
+- `npm install`
+- `npm run build build-npm-ja`
+- `cp dist/npm__ja.js <react-findy-id directory>/src`
+
+Ref. https://github.com/firebase/firebaseui-web/issues/379#issuecomment-417684828

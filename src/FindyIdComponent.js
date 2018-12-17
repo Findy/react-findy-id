@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import firebase from 'firebase/app'
 import 'firebase/auth'
-import * as firebaseui from 'firebaseui'
+// Load localized firebaseui npm package.
+// See README.md localization section.
+import * as firebaseui from './npm__ja.js'
 import 'firebaseui/dist/firebaseui.css'
 
 export class FindyIdComponent extends Component {
