@@ -3,7 +3,7 @@ import firebase from 'firebase/app'
 import 'firebase/auth'
 // Load localized firebaseui npm package.
 // See README.md localization section.
-import * as firebaseui from './npm__ja.js'
+import * as firebaseui from '../lib/npm__ja.js'
 import 'firebaseui/dist/firebaseui.css'
 
 export class FindyIdComponent extends Component {
