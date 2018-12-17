@@ -22,7 +22,7 @@
   "homepage": "https://github.com/Findy/react-findy-id#readme",
   "dependencies": {
     "firebase": "^5.5.7",
-    "firebaseui": "^3.4.1"
+    "firebaseui": "^3.5.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
