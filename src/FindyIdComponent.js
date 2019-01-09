@@ -23,7 +23,8 @@ export class FindyIdComponent extends Component {
         {
           provider: firebase.auth.GithubAuthProvider.PROVIDER_ID,
           scopes: ['user:email']
-        }
+        },
+        firebase.auth.EmailAuthProvider.PROVIDER_ID
       ],
       tosUrl: props.tosUrl,
       privacyPolicyUrl: props.privacyPolicyUrl
