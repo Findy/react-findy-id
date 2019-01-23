@@ -3,6 +3,50 @@ import React from 'react'
 import { render } from 'react-dom'
 import { FindyIdComponent } from '../../src'
 
+// via Twitter
+//  authResult: {
+//    additionalUserInfo: {
+//      isNewUser: false,
+//      profile: {
+//        created_at: "Sat Mar 14 00:00:00 +0000 2008",
+//        description: "User profile in twitter",
+//        favourites_count: 1000,
+//        followers_count: 100,
+//        friends_count: 200,
+//        id: 100000,
+//        id_str: "100000",
+//        lang: "ja",
+//        location: "日本 東京",
+//        name: "Twitter Name",
+//        screen_name: "twitterusername",
+//        statuses_count: 20000
+//      },
+//      providerId: "twitter.com",
+//      username: "twitterusername
+//    },
+//    credential: {
+//      accessToken: "xxxxx",
+//      providerId: "twitter.com",
+//      secret: "xxxxxx",
+//      signInMethod: "twitter.com"
+//    },
+//    operationType: "signIn",
+//    user: {
+//      displayName: "Twitter Name",
+//      email: "twitter+email@example.com",
+//      emailVerified: false,
+//      isAnonymous: false,
+//      metadata: {
+//        creationTime: "Wed, 12 Dec 2018 05:46:09 GMT",
+//        lastSignInTime: "Wed, 09 Jan 2019 01:58:40 GMT"
+//      },
+//      phoneNumber: null,
+//      photoURL: null,
+//      refreshToken: "XXXXXXXX",
+//      uid: "XXXXXXX"
+//    }
+//  }
+//
 // via Email
 //  authResult: {
 //    additionalUserInfo: {
@@ -39,7 +83,7 @@ import { FindyIdComponent } from '../../src'
 //        name: "GitHub Name"
 //      },
 //      providerId: "github.com",
-//      username: "deraru"
+//      username: "githubusername"
 //    },
 //    credential: {
 //      accessToken: "xxxxxxxx",
