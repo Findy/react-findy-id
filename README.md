@@ -16,7 +16,13 @@
 
 ## Put Sign-in button
 
-Put Sign-in button on your app.
+Import React component
+
+```javascript
+import { FindyIdComponent } from '@findy/react-findy-id'
+```
+
+and put Sign-in button on your app.
 
 ```javascript
 <FindyIdComponent
@@ -26,6 +32,8 @@ Put Sign-in button on your app.
   privacyPolicyUrl="https://findy-code.io/policy"
 />
 ```
+
+### props
 
 Name|type|Description
 ----|----|----
