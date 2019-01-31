@@ -7,8 +7,7 @@ import * as firebaseui from '../lib/npm__ja.js'
 import 'firebaseui/dist/firebaseui.css'
 
 export class FindyIdComponent extends Component {
-  constructor(props) {
-    super(props)
+  componentDidMount() {
     const ui = new firebaseui.auth.AuthUI(firebase.auth())
     ui.start('#firebaseui-auth-container', this.firebaseUiConfig())
   }
