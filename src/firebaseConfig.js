@@ -1,4 +1,4 @@
-export const firebaseConfig = {
+const firebaseConfig = {
   apiKey: 'AIzaSyDOTe8SVN_5WGtuKdXQoQy5slhAq3kEIbs',
   authDomain: 'findy-id.firebaseapp.com',
   databaseURL: 'https://findy-id.firebaseio.com',
@@ -6,3 +6,5 @@ export const firebaseConfig = {
   storageBucket: 'findy-id.appspot.com',
   messagingSenderId: '943881521886'
 }
+
+export default firebaseConfig
