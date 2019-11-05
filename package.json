@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/Findy/react-findy-id#readme",
   "dependencies": {
-    "firebase": "^5.5.7",
-    "firebaseui": "^3.5.0",
+    "firebase": "^7.2.0",
+    "firebaseui": "^4.2.0",
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
