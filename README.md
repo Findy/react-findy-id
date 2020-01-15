@@ -77,6 +77,6 @@ privacyPolicyUrl|String|Privacy Policy URL.
 - `cd firebaseui-web`
 - `npm install`
 - `npm run build build-npm-ja`
-- `cp dist/npm__ja.js <react-findy-id directory>/src`
+- `cp dist/npm__ja.js <react-findy-id directory>/lib`
 
 Ref. https://github.com/firebase/firebaseui-web/issues/379#issuecomment-417684828
