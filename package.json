@@ -1,6 +1,6 @@
 {
   "name": "@findy/react-findy-id",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "React container for Findy ID.",
   "main": "src/index.js",
   "scripts": {
