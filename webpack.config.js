@@ -4,6 +4,11 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'examples/src/index.html'),
   filename: './index.html'
 })
+const Dotenv = require('dotenv-webpack')
+const dotenv = new Dotenv({
+  safe: true
+})
+
 module.exports = {
   entry: path.join(__dirname, 'examples/src/index.js'),
   module: {
@@ -19,7 +24,10 @@ module.exports = {
       }
     ]
   },
-  plugins: [htmlWebpackPlugin],
+  plugins: [
+    htmlWebpackPlugin,
+    dotenv
+  ],
   resolve: {
     extensions: ['.js', '.jsx']
   },
