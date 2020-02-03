@@ -48,6 +48,8 @@ privacyPolicyUrl|String|Privacy Policy URL.
 
 - `git clone https://github.com/Findy/react-findy-id.git`
 - `npm install`
+- `cp .env.example .env`
+- Edit the `.env` file.
 
 ## Run on local example app
 
