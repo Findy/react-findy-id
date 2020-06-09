@@ -14,6 +14,16 @@
 
 `npm install @findy/react-findy-id --save`
 
+## Prerequisites
+
+In order to initialize firebase, you need to set the configuration as "__FINDY_FIREBASE_CONFIG__"
+
+example is [here](https://github.com/Findy/react-findy-id/blob/master/examples/src/index.html)
+
+For more information about Firebase config object, please see below.
+
+https://firebase.google.com/docs/web/setup?hl=en#config-object
+
 ## Put Sign-in button
 
 Import React component
