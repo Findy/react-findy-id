@@ -6,7 +6,11 @@
 
 ## Prerequisites
 
-In order to initialize firebase, you need to set the configuration as "__FINDY_FIREBASE_CONFIG__"
+If you do not set "__FINDY_FIREBASE_CONFIG__",`
+by default this module connected to "findy-id" project
+
+If you want to connect other project,
+you need to set the configuration as "__FINDY_FIREBASE_CONFIG__"
 
 example is [here](https://github.com/Findy/react-findy-id/blob/master/examples/src/index.html)
 
