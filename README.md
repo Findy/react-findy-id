@@ -77,6 +77,7 @@ privacyPolicyUrl|String|Privacy Policy URL.
 
 - `git clone https://github.com/firebase/firebaseui-web.git`
 - `cd firebaseui-web`
+- Replace `でログイン` to `でログイン/登録` in `translations/ja.xtb` file.
 - `npm install`
 - `npm run build build-npm-ja`
 - `cp dist/npm__ja.js <react-findy-id directory>/lib`
