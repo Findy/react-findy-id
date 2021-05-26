@@ -3,9 +3,7 @@ name: Save cache
 on:
   push:
     branches:
-      - develop
-    paths:
-      - package-lock.json
+      - master
 
 jobs:
   saveCache:
