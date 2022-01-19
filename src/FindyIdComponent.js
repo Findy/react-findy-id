@@ -29,6 +29,7 @@ export class FindyIdComponent extends React.Component {
           provider: firebase.auth.GithubAuthProvider.PROVIDER_ID,
           scopes: ['user:email']
         },
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
         firebase.auth.TwitterAuthProvider.PROVIDER_ID,
         firebase.auth.EmailAuthProvider.PROVIDER_ID
       ],
