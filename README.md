@@ -2,6 +2,9 @@
 
 # React Findy ID
 
+> [!CAUTION]
+> This project is currently unmaintained.
+
 # How to use
 
 ## Prerequisites
